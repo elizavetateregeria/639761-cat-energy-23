@@ -1,0 +1,8 @@
+.copyright__link {
+  text-decoration: none;
+}
+
+.copyright__text {
+  @include basic-text-mobile(18.4px, 16px);
+}
+

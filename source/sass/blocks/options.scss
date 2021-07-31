@@ -1,0 +1,14 @@
+.options {
+  width: 320px;
+  margin: 0 auto;
+  padding: 0 0 27px;
+}
+
+.options__wrapper {
+  width: $mobile-wrapper;
+  margin: 0 20px;
+}
+
+.options__list {
+  @include list-reset;
+}
