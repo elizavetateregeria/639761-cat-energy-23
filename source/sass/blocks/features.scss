@@ -4,11 +4,6 @@
   padding: 0 0 42px;
 }
 
-.features__wrapper {
-  width: $mobile-wrapper;
-  margin: 0 20px;
-}
-
 .features__list {
   @include list-reset;
 }

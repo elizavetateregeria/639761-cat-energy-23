@@ -3,4 +3,9 @@
   background-color: $basic-green;
   text-decoration: none;
   text-transform: uppercase;
+
+  &--more {
+    background-color: $basic_grey;
+    color: $special_dark-grey;
+  }
 }

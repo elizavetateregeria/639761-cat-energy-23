@@ -1,0 +1,25 @@
+.additional-products {
+  width: 320px;
+  margin: 0 auto;
+  padding: 0 0 36px;
+}
+
+.additional-products__list {
+  @include list-reset;
+}
+
+.additional-products__item {
+  border-top: 1px solid $special_grey;
+}
+
+.additional-products__title {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  color: $special_dark-grey-2;
+  text-transform: uppercase;
+}
+
+.additional-products__details {
+  @include basic-text-mobile(14px, 14px);
+}

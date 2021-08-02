@@ -1,0 +1,27 @@
+.catalog {
+  width: 320px;
+  margin: 0 auto;
+  padding: 27px 0 25px;
+  border-top: 1px solid $basic_grey-2;
+}
+
+.catalog__list {
+  @include list-reset;
+}
+
+.catalog__show-more-block {
+  border-top: 1px solid $basic_grey-2;
+  border-bottom: 1px solid $basic_grey-2;
+  text-align: center;
+}
+
+.catalog__show-more-title {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.catalog__show-more-text {
+  @include basic-text-mobile(16px, 12px);
+}

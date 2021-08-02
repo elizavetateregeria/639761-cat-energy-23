@@ -1,3 +1,10 @@
+.contacts {
+  padding-top: 28px;
+  &--main {
+    background-color: $basic_white;
+  }
+}
+
 .contacts__slogan {
   text-transform: uppercase;
   font-size: 16px;

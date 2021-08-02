@@ -5,11 +5,6 @@
   background-color: $basic_grey-3;
 }
 
-.example__wrapper {
-  width: $mobile-wrapper;
-  margin: 0 20px;
-}
-
 .example__text {
   @include basic-text-mobile;
 }
