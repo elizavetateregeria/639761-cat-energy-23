@@ -6,7 +6,7 @@
 
 @mixin basic-text-mobile($line-height: 18px, $font-size: 14px) {
   color: $special_dark-grey;
-  font-family: Arial, sans-serif;
+  font-family: "Arial", sans-serif;
   font-weight: 400;
   font-size: $font-size;
   line-height: $line-height;
