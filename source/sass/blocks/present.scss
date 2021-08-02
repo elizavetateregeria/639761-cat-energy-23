@@ -5,7 +5,8 @@
 }
 
 .present__content {
-  background: url("../../img/gift-mobile-bg.jpg");
+  background-color: $basic_green;
+  background-image: url("../../img/gift-mobile-bg.jpg");
   background-repeat: no-repeat;
   color: $basic_white;
 }
