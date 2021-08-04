@@ -1,0 +1,11 @@
+.features {
+  padding: 0 0 42px;
+}
+
+.features__list {
+  @include list-reset;
+}
+
+.features__list-item {
+  @include basic-text-mobile;
+}

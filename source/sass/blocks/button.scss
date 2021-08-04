@@ -1,0 +1,15 @@
+.button {
+  color: $basic_white;
+  background-color: $basic-green;
+  text-transform: uppercase;
+  border: none;
+
+  &--more {
+    background-color: $basic_grey;
+    color: $special_dark-grey;
+  }
+}
+
+a.button {
+  text-decoration: none;
+}

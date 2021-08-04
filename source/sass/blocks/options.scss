@@ -1,0 +1,7 @@
+.options {
+  padding-bottom: 27px;
+}
+
+.options__list {
+  @include list-reset;
+}
