@@ -1,9 +1,8 @@
 .promo {
-  width: 320px;
-  margin: 0 auto;
   padding: 27px 0 22px;
   background: linear-gradient(rgba(104, 183, 56, 0.85) 302px, $basic_white 302px),
     url("../../img/index-background.jpg");
+  background-position: top center;
   background-repeat: no-repeat;
   color: $basic_white;
 }
