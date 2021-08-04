@@ -37,7 +37,7 @@
           <p class="order__text">Заполните анкету, и мы подберем<br>программу питания для вашего кота</p>
         </div>
         <form class="order__form form" action="https://echo.htmlacademy.ru" method="POST">
-          <fieldset class="form__fieldset">
+          <fieldset class="form__fieldset form__fieldset--main">
             <div class="wrapper">
               <label class="form__label form__label--text" for="cat-name">ИМЯ:*</label>
               <input class="form__text-input" type="text" id="cat-name" name="cat" required placeholder="барсик">
@@ -47,7 +47,7 @@
               <input class="form__text-input" type="text" id="cat-age" name="age" placeholder="7">
             </div>
           </fieldset>
-          <fieldset class="form__fieldset">
+          <fieldset class="form__fieldset form__fieldset--main">
             <div class="wrapper">
               <input class="form__radio" type="radio" name="programm" id="programm-choice-slim" value="slim" checked>
               <label class="form__label form__label--radio" for="programm-choice-slim">похудение</label>
@@ -98,7 +98,7 @@
             <p class="contacts__address">ул. Большая<br>Конюшенная, д. 19/8<br>Санкт-Петербург</p>
           </div>
         <div class="contacts__map">
-          <img src="img/location.png" alt="Месторасположение магазина на карте">
+          <img class="img-fluid" src="img/location.png" alt="Месторасположение магазина на карте">
         </div>
       </div>
       <div class="wrapper">
