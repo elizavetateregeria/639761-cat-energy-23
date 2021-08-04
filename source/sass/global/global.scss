@@ -12,6 +12,12 @@
 }
 
 .wrapper {
-  width: 280px;
-  margin: 0 20px;
+  max-width: 280px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
 }
