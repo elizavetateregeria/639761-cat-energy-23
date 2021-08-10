@@ -1,4 +1,42 @@
 .page-header {
+  min-height: 65px;
   padding: 10px 0 17px;
   color: $basic_black;
+
+  @media (min-width: $tablet-width) {
+    padding: 24px 0 0;
+  }
+}
+
+.page-header__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.page-header__logo {
+  height: 38px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    height: 52px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 59px;
+  }
+}
+
+.page-header__logo-title {
+  margin-left: 57px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 0;
+  }
 }

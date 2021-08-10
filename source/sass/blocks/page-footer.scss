@@ -1,4 +1,41 @@
 .page-footer {
   padding-bottom: 22px;
   background-color: $basic_grey;
+
+  @media ($tablet-width) {
+    padding-bottom: 61px;
+  }
+
+  @media ($desktop-width) {
+    padding-bottom: 58px;
+  }
+}
+
+.page-footer__contacts {
+  padding-top: 28px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 62px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 0;
+    position: relative;
+  }
+}
+
+.page-footer__bottom-wrapper {
+  padding-top: 39px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    padding-top: 55px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 57px;
+  }
 }

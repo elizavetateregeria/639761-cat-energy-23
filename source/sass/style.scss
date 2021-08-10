@@ -1,8 +1,8 @@
-@import "global/global.scss";
 @import "global/normalize";
 @import "global/fonts.scss";
 @import "global/variables.scss";
 @import "global/mixins.scss";
+@import "global/global.scss";
 @import "blocks/button.scss";
 @import "blocks/contacts.scss";
 @import "blocks/copyright.scss";
@@ -15,6 +15,7 @@
 @import "blocks/page-header.scss";
 @import "blocks/page-footer.scss";
 @import "blocks/promo.scss";
+@import "blocks/main-nav.scss";
 @import "blocks/site-list.scss";
 @import "blocks/social.scss";
 @import "blocks/title.scss";

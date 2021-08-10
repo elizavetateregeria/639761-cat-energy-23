@@ -1,6 +1,7 @@
 .site-list {
   @include list-reset;
   color: $basic_black;
+  text-align: center;
 }
 
 .site-list__item {
