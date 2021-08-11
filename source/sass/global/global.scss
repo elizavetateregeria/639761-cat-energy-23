@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -12,9 +18,21 @@
 }
 
 .wrapper {
-  max-width: 280px;
+  max-width: 320px;
   padding: 0 20px;
   margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    max-width: 768px;
+    padding: 0 30px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1440px;
+    padding: 0 110px;
+    margin: 0 auto;
+  }
 }
 
 .img-fluid {

@@ -1,11 +1,49 @@
 .features {
   padding: 0 0 42px;
+  min-height: 420px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 769px;
+    padding-bottom: 47px;
+    border-bottom: 1px solid #e6e6e6;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 383px;
+    padding-bottom: 11px;
+    border-bottom: none;
+  }
 }
 
 .features__list {
   @include list-reset;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: space-between;
+  }
 }
 
 .features__list-item {
   @include basic-text-mobile;
+
+  @media (min-width: $tablet-width) {
+    width: 230px;
+
+    &:nth-child(2n) {
+      margin-left: 153px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &:nth-child(2n) {
+      margin-left: 0;
+    }
+  }
 }

@@ -1,7 +1,46 @@
 .options {
   padding-bottom: 27px;
+  min-height: 589px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 45px;
+    min-height: 819px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 71px;
+    min-height: 641px;
+  }
 }
 
 .options__list {
   @include list-reset;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+  }
+}
+
+.options__list-item {
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $tablet-width) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+
+    &:nth-child(odd) {
+      margin-right: 80px;
+    }
+  }
 }

@@ -1,5 +1,13 @@
 .copyright__link {
+  display: flex;
+  align-items: center;
   text-decoration: none;
+}
+
+.copyright__link svg {
+  fill: $special_grey-2;
+  width: 27px;
+  height: 34px;
 }
 
 .copyright__text {

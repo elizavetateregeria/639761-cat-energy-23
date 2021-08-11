@@ -1,15 +1,64 @@
 .example {
   padding: 27px 0 25px;
+  min-height: 705px;
   background-color: $basic_grey-3;
+
+  @media (min-width: $tablet-width) {
+    padding: 43px 0 67px;
+    min-height: 1081px;
+    background: linear-gradient($basic_white 619px, $basic_grey-3 619px);
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+    min-height: 656px;
+    background: linear-gradient($basic_white 194px, $basic_grey-3 194px);
+  }
+}
+
+.example__wrapper {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 436px auto;
+    grid-template-rows: 194px 1fr 1fr;
+  }
+}
+
+.example__title {
+  @media (min-width: $desktop-width) {
+    grid-row: 1;
+  }
 }
 
 .example__text {
   @include basic-text-mobile;
+
+  @media (min-width: $desktop-width) {
+    grid-row: 2;
+  }
+}
+
+.example__info {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (min-width: $desktop-width) {
+    grid-row: 3;
+  }
 }
 
 .example__info-block {
   font-size: 24px;
   line-height: 24px;
+  flex-basis: 50%;
+
+  @media (min-width: $tablet-width) {
+    flex-basis: 25%;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-basis: 50%;
+  }
 }
 
 .example__info-description {
@@ -21,6 +70,14 @@
 .example__info-expenses {
   line-height: 20px;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    flex-basis: 50%;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-basis: 100%;
+  }
 }
 
 .example__result-button {

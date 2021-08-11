@@ -7,6 +7,10 @@
   &--main {
     line-height: 36px;
     text-align: center;
+
+    @media (min-width: $tablet-width) {
+      text-align: left;
+    }
   }
 
   &--inner-main {
