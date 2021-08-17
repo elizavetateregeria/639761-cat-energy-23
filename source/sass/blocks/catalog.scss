@@ -5,6 +5,14 @@
 
 .catalog .wrapper {
   padding: 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 110px;
+  }
 }
 
 .catalog__list {
@@ -13,24 +21,15 @@
   flex-direction: column;
 
   @media (min-width: $tablet-width) {
-    flex-direction: row;
-    flex-wrap: wrap;
+    justify-content: start;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(324px, 1fr));
+    grid-gap: 60px;
   }
-}
 
-.catalog__show-more-block {
-  border-top: 1px solid $basic_grey-2;
-  border-bottom: 1px solid $basic_grey-2;
-  text-align: center;
-}
-
-.catalog__show-more-title {
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 400;
-  text-transform: uppercase;
-}
-
-.catalog__show-more-text {
-  @include basic-text-mobile(16px, 12px);
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(auto-fill, minmax(245px, 1fr));
+    grid-column-gap: 80px;
+    grid-row-gap: 62px;
+  }
 }

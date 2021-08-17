@@ -1,12 +1,15 @@
 .present {
   padding-bottom: 35px;
+  min-height: 290px;
 }
 
 .present__content {
   background-color: $basic_green;
   background-image: url("../../img/gift-mobile-bg.jpg");
+  background-position: center;
   background-repeat: no-repeat;
   color: $basic_white;
+  text-align: center;
 }
 
 .present__text {

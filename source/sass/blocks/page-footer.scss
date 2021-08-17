@@ -1,5 +1,4 @@
 .page-footer {
-  padding-bottom: 22px;
   background-color: $basic_grey;
 
   @media ($tablet-width) {
@@ -26,9 +25,11 @@
 
 .page-footer__bottom-wrapper {
   padding-top: 39px;
+  padding-bottom: 22px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: $basic_grey;
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
