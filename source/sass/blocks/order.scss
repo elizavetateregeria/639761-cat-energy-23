@@ -3,6 +3,18 @@
   border-top: 1px solid $grey-line;
 }
 
+.order .wrapper {
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 110px;
+  }
+}
+
 .order__text {
   text-transform: uppercase;
 }

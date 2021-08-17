@@ -2,9 +2,19 @@
   border: none;
   padding: 0;
 
-  &--main {
+  &--cat,
+  &--program-choice {
     border-bottom: 1px solid $grey-line;
   }
+}
+
+.form__wrapper {
+  width: 100%;
+  max-width: 550px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .form__label {
