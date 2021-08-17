@@ -1,0 +1,27 @@
+.show-more-block {
+  border-top: 1px solid $basic_grey-2;
+  border-bottom: 1px solid $basic_grey-2;
+
+  @media (min-width: $tablet-width) {
+    border: 1px solid $basic_grey-2;
+  }
+}
+
+.show-more-block__wrapper {
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+  padding: 25px 20px;
+  text-align: center;
+}
+
+.show-more-block__title {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.show-more-block__text {
+  @include basic-text-mobile(16px, 12px);
+}
