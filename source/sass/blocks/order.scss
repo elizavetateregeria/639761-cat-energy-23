@@ -15,6 +15,13 @@
   }
 }
 
+.order__title,
+.order__text {
+  max-width: 550px; //спросить у наставника
+  padding: 0 20px; //спросить у наставника
+  margin: 0 auto; //спросить у наставника
+}
+
 .order__text {
   text-transform: uppercase;
 }
