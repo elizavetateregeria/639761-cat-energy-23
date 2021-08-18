@@ -1,10 +1,29 @@
 .button {
+  padding-top: 10px;
+  padding-bottom: 10px;
   color: $basic_white;
   background-color: $basic-green;
   text-transform: uppercase;
+  text-align: center;
   border: none;
+  font-size: 16px;
+  line-height: 20px;
+
+  &--promo {
+    padding-top: 7px;
+    padding-bottom: 7px;
+    font-size: 14px;
+    line-height: 18px;
+
+    @media (min-width: $tablet-width) {
+      padding: 13px 26px;
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
 
   &--more {
+    display: block;
     background-color: $basic_grey;
     color: $special_dark-grey;
   }
