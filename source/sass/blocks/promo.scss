@@ -1,4 +1,6 @@
 .promo {
+    position: relative;
+
   padding: 27px 0 22px;
   min-height: 480px;
   background: linear-gradient(rgba(104, 183, 56, 0.85) 302px, $basic_white 302px),
@@ -22,14 +24,18 @@
 }
 
 .promo__wrapper {
-  position: relative;
-
   @media (min-width: $desktop-width) {
     display: flex;
   }
 }
 
+.promo__title {
+  margin-bottom: 26px;
+}
+
 .promo__slogan {
+  margin-top: 0;
+  margin-bottom: 28px;
   line-height: 14px;
   text-transform: uppercase;
   text-align: center;
