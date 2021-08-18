@@ -1,9 +1,9 @@
 .promo {
-  position: relative;
   padding: 27px 0 22px;
   min-height: 480px;
   background: linear-gradient(rgba(104, 183, 56, 0.85) 302px, $basic_white 302px),
     url("../../img/index-background.jpg");
+  background-size: contain;
   background-position: top center;
   background-repeat: no-repeat;
   color: $basic_white;
@@ -22,6 +22,8 @@
 }
 
 .promo__wrapper {
+  position: relative;
+
   @media (min-width: $desktop-width) {
     display: flex;
   }
@@ -38,11 +40,11 @@
 }
 
 .promo__button {
-  position: absolute;
-  bottom: 22px;
-
-  @media (min-width: $tablet-width) {
-    position: static;
+  @media (max-width: $mobile-width-only) {
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    bottom: 0;
   }
 }
 
