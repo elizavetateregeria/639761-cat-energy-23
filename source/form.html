@@ -38,41 +38,43 @@
           <h1 class="order__title title">Подбор программы</h1>
           <p class="order__text">Заполните анкету, и мы подберем<br>программу питания для вашего кота</p>
           <form class="order__form form" action="https://echo.htmlacademy.ru" method="POST">
-            <fieldset class="form__fieldset form__fieldset--cat">
-              <div class="form__wrapper">
-                <div class="form__group">
-                  <label class="form__label form__label--text" for="cat-name">ИМЯ:*</label>
-                  <input class="form__text-input" type="text" id="cat-name" name="cat" required placeholder="барсик">
+            <div class="form__fieldset-container">
+              <fieldset class="form__fieldset form__fieldset--cat">
+                <div class="form__wrapper">
+                  <div class="form__group">
+                    <label class="form__label form__label--text" for="cat-name">ИМЯ:*</label>
+                    <input class="form__text-input" type="text" id="cat-name" name="cat" required placeholder="барсик">
+                  </div>
+                  <div class="form__group">
+                    <label class="form__label form__label--text" for="cat-weight">Вес (кг):*</label>
+                    <input class="form__text-input" type="text" id="cat-weight" name="weight" required placeholder="7">
+                  </div>
+                  <div class="form__group">
+                    <label class="form__label form__label--text" for="cat-age">Возраст (лет):</label>
+                    <input class="form__text-input" type="text" id="cat-age" name="age" placeholder="7">
+                  </div>
                 </div>
-                <div class="form__group">
-                  <label class="form__label form__label--text" for="cat-weight">Вес (кг):*</label>
-                  <input class="form__text-input" type="text" id="cat-weight" name="weight" required placeholder="7">
+              </fieldset>
+              <fieldset class="form__fieldset form__fieldset--program-choice">
+                <div class="form__wrapper">
+                  <div class="form__group">
+                    <input class="form__radio" type="radio" name="programm" id="programm-choice-slim" value="slim" checked>
+                    <label class="form__label form__label--radio" for="programm-choice-slim">похудение</label>
+                  </div>
+                  <div class="form__group">
+                    <input class="form__radio" type="radio" name="programm" id="programm-choice-mass" value="mass">
+                    <label class="form__label form__label--radio" for="programm-choice-mass">Набор массы</label>
+                  </div>
+                  <div class="form__group">
+                    <input class="form__radio" type="radio" name="programm" id="programm-choice-consultation" value="consultation">
+                    <label class="form__label form__label--radio" for="programm-choice-consultation">Не знаю (Нужен ваш совет)</label>
+                  </div>
                 </div>
-                <div class="form__group">
-                  <label class="form__label form__label--text" for="cat-age">Возраст (лет):</label>
-                  <input class="form__text-input" type="text" id="cat-age" name="age" placeholder="7">
-                </div>
-              </div>
-            </fieldset>
-            <fieldset class="form__fieldset form__fieldset--program-choice">
-              <div class="form__wrapper">
-                <div class="form__group">
-                  <input class="form__radio" type="radio" name="programm" id="programm-choice-slim" value="slim" checked>
-                  <label class="form__label form__label--radio" for="programm-choice-slim">похудение</label>
-                </div>
-                <div class="form__group">
-                  <input class="form__radio" type="radio" name="programm" id="programm-choice-mass" value="mass">
-                  <label class="form__label form__label--radio" for="programm-choice-mass">Набор массы</label>
-                </div>
-                <div class="form__group">
-                  <input class="form__radio" type="radio" name="programm" id="programm-choice-consultation" value="consultation">
-                  <label class="form__label form__label--radio" for="programm-choice-consultation">Не знаю (Нужен ваш совет)</label>
-                </div>
-              </div>
-            </fieldset>
+              </fieldset>
+            </div>
             <fieldset class="form__fieldset form__fieldset--owner">
+              <legend class="form__legend">Контактные данные<br>(владельца кота)</legend>
               <div class="form__wrapper">
-                <legend class="form__legend">Контактные данные<br>(владельца кота)</legend>
                 <div class="form__group">
                   <label class="form__label form__label--text" for="owner-email">E-mail:*</label>
                   <input class="form__text-input form__text-input--icon form__text-input--icon-mail" type="email" name="mail" id="owner-email" required placeholder="kuklachev@gmail.com">
@@ -84,14 +86,14 @@
               </div>
             </fieldset>
             <fieldset class="form__fieldset form__fieldset--comment">
+              <legend class="form__legend">Комментарий</legend>
               <div class="form__wrapper">
-                <legend class="form__legend">Комментарий</legend>
                 <textarea class="form__textarea" name="habit" id="cat-habit" cols="30" rows="10" placeholder="Расскажите обо всех повАдках кота"></textarea>
               </div>
             </fieldset>
             <fieldset class="form__fieldset form__fieldset--additional">
+              <legend class="form__legend">Дополнительно</legend>
               <div class="form__wrapper">
-                <legend class="form__legend">Дополнительно</legend>
                 <div class="form__group">
                   <input class="form__checkbox" type="checkbox" name="sweetener" id="add-sweetener" checked>
                   <label class="form__label form__label--checkbox"for="add-sweetener">сахарозаменитель</label>
@@ -110,9 +112,11 @@
                 </div>
               </div>
             </fieldset>
-            <input class="form__button button" type="submit" value="отправить заявку">
+            <div class="form__wrapper form__wrapper--submit">
+              <input class="form__button button" type="submit" value="отправить заявку">
+              <p class="order__note">* — Обязательные поля</p>
+            </div>
           </form>
-          <p class="order__note">* — Обязательные поля</p>
         </div>
       </section>
     </main>

@@ -7,7 +7,7 @@
   padding: 0;
 
   @media (min-width: $tablet-width) {
-    padding: 0 30px;
+    padding: 0 67px 0 71px;
   }
 
   @media (min-width: $desktop-width) {
@@ -17,12 +17,17 @@
 
 .order__title,
 .order__text {
-  max-width: 550px; //спросить у наставника
-  padding: 0 20px; //спросить у наставника
-  margin: 0 auto; //спросить у наставника
+  @media (max-width: $mobile-width-only) {
+    @include text-wrap;
+  }
+}
+
+.order__title {
+  margin-bottom: 37px;
 }
 
 .order__text {
+  margin-bottom: 39px;
   text-transform: uppercase;
 }
 
