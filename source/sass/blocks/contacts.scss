@@ -1,4 +1,6 @@
 .contacts {
+  background-color: $basic_grey;
+
   &--main {
     background-color: $basic_white;
   }
@@ -7,10 +9,9 @@
 .contacts__info {
   display: flex;
   justify-content: space-between;
-  max-width: 320px;
+  max-width: 450px;
   padding: 0 20px 26px;
   margin: 0 auto;
-  background-color: $basic_white;
 
   @media (min-width: $tablet-width) {
     max-width: 708px;
@@ -19,6 +20,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    background-color: $basic_white;
     position: absolute;
     top: 95px;
     left: 110px;

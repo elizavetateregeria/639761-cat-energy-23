@@ -3,7 +3,31 @@
   border-top: 1px solid $grey-line;
 }
 
+.order .wrapper {
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 67px 0 71px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 110px;
+  }
+}
+
+.order__title,
 .order__text {
+  @media (max-width: $mobile-width-only) {
+    @include text-wrap;
+  }
+}
+
+.order__title {
+  margin-bottom: 37px;
+}
+
+.order__text {
+  margin-bottom: 39px;
   text-transform: uppercase;
 }
 

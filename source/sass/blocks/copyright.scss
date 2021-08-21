@@ -1,7 +1,16 @@
+.copyright {
+  width: 100%;
+}
+
 .copyright__link {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   text-decoration: none;
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-end;
+  }
 }
 
 .copyright__link svg {
@@ -12,4 +21,8 @@
 
 .copyright__text {
   @include basic-text-mobile(18.4px, 16px);
+
+  @media (min-width: $tablet-width) {
+    margin-right: 22px;
+  }
 }
