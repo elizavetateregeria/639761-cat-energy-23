@@ -6,7 +6,16 @@
   display: flex;
   flex-direction: column;
 
+  @media (max-width: $mobile-width-only) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+  }
+
   @media (min-width: $tablet-width) {
+    position: static;
     flex-direction: row;
     flex-wrap: wrap;
     width: 440px;
@@ -19,11 +28,70 @@
 }
 
 .main-nav__toggle {
+  display: block;
+  width: 24px;
+  height: 16px;
+  padding: 0;
+  border: none;
+  z-index: 2;
+  background-color: inherit;
   position: absolute;
-  right: 0;
-  top: -26px;
+  top: -42px;
+  right: 20px;
+  cursor: pointer;
 
   @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 24px;
+  height: 1px;
+  background-color: $basic_black;
+  box-shadow: 0 8px 0 0 $basic_black,
+    0 16px 0 0 $basic_black;
+}
+
+.main-nav--opened .main-nav__toggle {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 25px;
+    height: 1px;
+    background-color: $basic_black;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .main-nav--closed .main-nav__list {
+    display: none;
+  }
+
+  .main-nav--opened .main-nav__list {
+    display: block;
+  }
+
+  .main-nav--nojs .main-nav__list {
+    position: static;
+  }
+
+  .main-nav--nojs .main-nav__toggle {
     display: none;
   }
 }
