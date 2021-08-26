@@ -1,25 +1,168 @@
 .option-card {
+  position: relative;
   padding: 30px 20px 18px;
   background-color: $basic-grey;
+
+  @media (min-width: $tablet-width) {
+    padding: 77px 315px 56px 52px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 51px;
+  }
+}
+
+.option-card--slim .option-card__content {
+  @media (min-width: $tablet-width) and (max-width: 1439px) {
+    &::after {
+      content: "";
+      background-image: url("../../img/cat_back_slim.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 200px;
+      height: 211px;
+      position: absolute;
+      right: 61px;
+      top: 81px;
+    }
+  }
+}
+
+.option-card--mass .option-card__content {
+  @media (min-width: $tablet-width) and (max-width: 1439px) {
+    &::after {
+      content: "";
+      background-image: url("../../img/cat_back_mass.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 268px;
+      height: 200px;
+      position: absolute;
+      right: 28px;
+      top: 91px;
+    }
+  }
 }
 
 .option-card__title {
   margin-top: 0;
+  margin-bottom: 29px;
   font-size: 24px;
   font-weight: 400;
   line-height: 37px;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 26px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 73px;
+  }
 }
+
+.option-card--slim .option-card__title {
+  padding-left: 71px;
+
+  &::before {
+    content: "";
+    background-image: url("../../img/cat_back_slim.svg");
+    width: 50px;
+    height: 53px;
+    position: absolute;
+    left: 22px;
+    top: 21px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 162px;
+
+    &::before {
+      width: 100px;
+      height: 106px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      left: 52px;
+      top: 41px;
+    }
+  }
+}
+
+.option-card--mass .option-card__title {
+  padding-left: 70px;
+
+  &::before {
+    content: "";
+    background-image: url("../../img/cat_back_mass.svg");
+    width: 67px;
+    height: 50px;
+    position: absolute;
+    left: 13px;
+    top: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 161px;
+
+    &::before {
+      width: 134px;
+      height: 100px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      left: 33px;
+      top: 47px;
+    }
+  }
+}
+
 
 .option-card__description {
   @include basic-text-mobile;
+  padding-bottom: 22px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid $grey-line;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    padding-bottom: 0;
+    margin-bottom: 50px;
+    border: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 23px;
+  }
 }
 
 .option-card__link {
+  position: relative;
   font-size: 16px;
   font-weight: 400;
   line-height: 16px;
   text-transform: uppercase;
   text-decoration: none;
   color: $basic_black;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: -48px;
+    top: 5px;
+    width: 32px;
+    height: 10px;
+    background-image: url("../../img/icon_arrow.svg");
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+
+    &::after {
+      top: 10px;
+      right: -56px;
+    }
+  }
 }

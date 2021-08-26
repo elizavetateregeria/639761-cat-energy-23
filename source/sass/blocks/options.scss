@@ -1,4 +1,5 @@
 .options {
+  padding-top: 22px;
   padding-bottom: 27px;
   min-height: 589px;
 
@@ -8,6 +9,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    padding-top: 82px;
     padding-bottom: 71px;
     min-height: 641px;
   }
@@ -20,6 +22,7 @@
 
   @media (min-width: $desktop-width) {
     flex-direction: row;
+    justify-content: space-between;
   }
 }
 
@@ -35,12 +38,13 @@
   }
 
   @media (min-width: $desktop-width) {
+    width: 46.7%; //проверить валидность
     &:not(:last-child) {
       margin-bottom: 0;
     }
 
-    &:nth-child(odd) {
-      margin-right: 80px;
-    }
+    // &:nth-child(odd) {
+    //   margin-right: 80px;
+    // }
   }
 }
