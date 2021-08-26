@@ -7,13 +7,18 @@
   &--main {
     line-height: 36px;
     text-align: center;
+  }
 
-    @media (min-width: $tablet-width) {
-      font-size: 60px;
-      line-height: 60px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+
+    &--main {
       text-align: left;
     }
   }
+
 
   &--inner-main {
     line-height: 36px;
