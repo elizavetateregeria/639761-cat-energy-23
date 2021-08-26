@@ -20,7 +20,7 @@
     padding: 141px 0 0;
     min-height: 696px;
     background: linear-gradient(to left, rgba(104, 183, 56, 0.85) 50%, $basic_white 50%),
-    url("../../img/index-background-desktop.jpg");
+      url("../../img/index-background-desktop.jpg");
     background-position: top right;
     background-size: contain;
     background-repeat: no-repeat;
@@ -34,14 +34,14 @@
 }
 
 .promo__content-block {
-   @media (min-width: $tablet-width) {
-     padding-left: 87px;
-     padding-right: 206px;
-   }
+  @media (min-width: $tablet-width) {
+    padding-left: 87px;
+    padding-right: 206px;
+  }
 
-   @media (min-width: $desktop-width) {
-     padding-top: 82px;
-   }
+  @media (min-width: $desktop-width) {
+    padding-top: 82px;
+  }
 }
 
 .promo__title {
@@ -83,9 +83,9 @@
     bottom: 0;
   }
 
-   @media (min-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     display: inline-block;
-   }
+  }
 }
 
 .promo__image {
