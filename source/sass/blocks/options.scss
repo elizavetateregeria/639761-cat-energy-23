@@ -38,7 +38,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 46.7%; //проверить валидность
+    width: 46.7%;
     &:not(:last-child) {
       margin-bottom: 0;
     }
