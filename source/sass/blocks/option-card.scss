@@ -64,17 +64,21 @@
 }
 
 .option-card--slim .option-card__title {
-  padding-left: 71px;
+  @media not screen and (min-width: $tablet-width),
+  (min-width: $desktop-width) {
+    padding-left: 71px;
 
-  &::before {
-    content: "";
-    background-image: url("../../img/cat_back_slim.svg");
-    width: 50px;
-    height: 53px;
-    position: absolute;
-    left: 22px;
-    top: 21px;
+    &::before {
+      content: "";
+      background-image: url("../../img/cat_back_slim.svg");
+      width: 50px;
+      height: 53px;
+      position: absolute;
+      left: 22px;
+      top: 21px;
+    }
   }
+
 
   @media (min-width: $desktop-width) {
     padding-left: 162px;
@@ -91,17 +95,21 @@
 }
 
 .option-card--mass .option-card__title {
+  @media not screen and (min-width: $tablet-width),
+  (min-width: $desktop-width) {
   padding-left: 70px;
 
-  &::before {
-    content: "";
-    background-image: url("../../img/cat_back_mass.svg");
-    width: 67px;
-    height: 50px;
-    position: absolute;
-    left: 13px;
-    top: 24px;
+    &::before {
+      content: "";
+      background-image: url("../../img/cat_back_mass.svg");
+      width: 67px;
+      height: 50px;
+      position: absolute;
+      left: 13px;
+      top: 24px;
+    }
   }
+
 
   @media (min-width: $desktop-width) {
     padding-left: 161px;
