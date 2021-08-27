@@ -25,12 +25,17 @@
 }
 
 .example__title {
+  margin-bottom: 33px;
+
   @media (min-width: $desktop-width) {
     grid-row: 1;
   }
 }
 
 .example__text {
+  margin-top: 0;
+  margin-bottom: 25px;
+
   @include basic-text-mobile;
 
   @media (min-width: $desktop-width) {
@@ -41,6 +46,7 @@
 .example__info {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 
   @media (min-width: $desktop-width) {
     grid-row: 3;
@@ -48,35 +54,55 @@
 }
 
 .example__info-block {
+  position: relative;
   font-size: 24px;
   line-height: 24px;
-  flex-basis: 50%;
+  text-align: center;
+  width: 44%;
+  border: 1px solid $special_grey;
 
   @media (min-width: $tablet-width) {
-    flex-basis: 25%;
+    width: 25%;
   }
 
   @media (min-width: $desktop-width) {
-    flex-basis: 50%;
+    width: 50%;
   }
 }
 
+.example__info-number {
+  margin: 0;
+  padding-top: 14px;
+  padding-bottom: 17px;
+}
+
 .example__info-description {
+  position: absolute;
+  top: 36px;
+  left: 50%;
+  padding-left: 15px;
+  padding-right: 15px;
+  transform: translateX(-50%);
+  background-color: $basic_grey-3;
   font-family: "Arial", sans-serif;
   font-size: 12px;
   line-height: 12px;
+  color: $special_dark-grey;
 }
 
 .example__info-expenses {
   line-height: 20px;
   text-transform: uppercase;
+  width: 100%;
+  margin-top: 34px;
+  text-align: center;
 
   @media (min-width: $tablet-width) {
-    flex-basis: 50%;
+    width: 50%;
   }
 
   @media (min-width: $desktop-width) {
-    flex-basis: 100%;
+    width: 100%;
   }
 }
 
