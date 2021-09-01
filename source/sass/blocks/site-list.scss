@@ -47,15 +47,13 @@
   text-decoration: none;
   color: $basic_black;
 
-  @media (min-width: $tablet-width) {
-    &:hover {
-      color: rgba($color: $basic_black, $alpha: 0.6);
-    }
+  // &:hover {
+  //   color: rgba($color: $basic_black, $alpha: 0.6);  Стили для меню на внутренних страницах на десктопной версии
+  // }
 
-    &:active {
-      color: rgba($color: $basic_black, $alpha: 0.3);
-    }
-  }
+  // &:active {
+  //   color: rgba($color: $basic_black, $alpha: 0.3);
+  // }
 
   @media (min-width: $desktop-width) {
     color: $basic_white;

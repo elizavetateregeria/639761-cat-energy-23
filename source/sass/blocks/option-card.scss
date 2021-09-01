@@ -65,7 +65,7 @@
 
 .option-card--slim .option-card__title {
   @media not screen and (min-width: $tablet-width),
-  (min-width: $desktop-width) {
+    (min-width: $desktop-width) {
     padding-left: 71px;
 
     &::before {
@@ -78,7 +78,6 @@
       top: 21px;
     }
   }
-
 
   @media (min-width: $desktop-width) {
     padding-left: 162px;
@@ -96,8 +95,8 @@
 
 .option-card--mass .option-card__title {
   @media not screen and (min-width: $tablet-width),
-  (min-width: $desktop-width) {
-  padding-left: 70px;
+    (min-width: $desktop-width) {
+    padding-left: 70px;
 
     &::before {
       content: "";
@@ -162,6 +161,10 @@
     width: 32px;
     height: 10px;
     background-image: url("../../img/icon_arrow.svg");
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 
   @media (min-width: $tablet-width) {
