@@ -15,14 +15,26 @@
 
 .copyright__link svg {
   fill: $special_grey-2;
-  width: 27px;
-  height: 34px;
+  width: 39px;
+  height: 39px;
+
+  &:hover {
+    fill: $basic_green;
+  }
+
+  &:active {
+    fill: rgba($color: $basic_green, $alpha: 0.3);
+  }
 }
 
 .copyright__text {
   @include basic-text-mobile(18.4px, 16px);
 
+  &:active {
+    color: rgba($color: $special_dark-grey, $alpha: 0.3);
+  }
+
   @media (min-width: $tablet-width) {
-    margin-right: 22px;
+    margin-right: 17px;
   }
 }

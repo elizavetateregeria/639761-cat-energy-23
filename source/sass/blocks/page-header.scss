@@ -40,6 +40,14 @@
   margin-bottom: 13px;
   margin-right: 44px;
 
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
   @media (min-width: $tablet-width) {
     height: 52px;
     width: 174px; //возможно удалить, когда вставишь логотип для планшетной версии
