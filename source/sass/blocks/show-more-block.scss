@@ -8,20 +8,36 @@
 }
 
 .show-more-block__wrapper {
+  position: relative;
   width: 100%;
   max-width: 450px;
   margin: 0 auto;
-  padding: 25px 20px;
+  padding: 78px 20px 25px;
   text-align: center;
 }
 
 .show-more-block__title {
+  margin-top: 0;
+  margin-bottom: 8px;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
   text-transform: uppercase;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-image: url("../../img/plus.svg");
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 .show-more-block__text {
   @include basic-text-mobile(16px, 12px);
+  margin-top: 0;
+  margin-bottom: 21px;
 }
