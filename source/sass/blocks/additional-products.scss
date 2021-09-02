@@ -1,5 +1,46 @@
 .additional-products {
+  position: relative;
   padding-bottom: 35px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 76px;
+  }
+}
+
+.additional-products__title {
+  margin-bottom: 36px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 36px;
+    margin-bottom: 80px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    right: 0;
+    height: 2px;
+    width: calc(100vw - 267px);
+    background-color: $basic_green;
+
+    @media (min-width: $tablet-width) {
+      top: 22px;
+      width: calc(100vw - 441px);
+    }
+  }
+
+  &::before {
+    @media (min-width: $tablet-width) {
+      content: "";
+      position: absolute;
+      top: 22px;
+      left: 0;
+      height: 2px;
+      width: calc(100vw - 738px);
+      background-color: $basic_green;
+    }
+  }
 }
 
 .additional-products__container {
@@ -16,6 +57,10 @@
   @include list-reset;
   padding-bottom: 35px;
 
+  @media (min-width: $tablet-width) {
+    padding-bottom: 69px;
+  }
+
   @media (min-width: $desktop-width) {
     width: 896px;
   }
@@ -23,6 +68,8 @@
 
 .additional-products__item {
   width: 100%;
+  padding-top: 13px;
+  padding-bottom: 19px;
   border-top: 1px solid $special_grey;
   display: flex;
   flex-direction: column;
@@ -33,6 +80,9 @@
 
   @media (min-width: $tablet-width) {
     border: 1px solid $special_grey;
+    padding: 26px 38px 28px;
+    flex-direction: row;
+    flex-wrap: wrap;
 
     &:not(:last-child) {
       border-bottom: none;
@@ -41,15 +91,46 @@
 }
 
 .additional-products__item-title {
+  margin-top: 0;
+  margin-bottom: 13px;
   font-size: 16px;
   line-height: 16px;
   font-weight: 400;
   text-transform: uppercase;
   color: $special_dark-grey-2;
+
+  @media (min-width: $tablet-width) {
+    width: 50%;
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .additional-products__details {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 15px;
+
   @include basic-text-mobile(14px, 14px);
+
+  @media (min-width: $tablet-width) {
+    width: 50%;
+    margin-bottom: 21px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.additional-products__details-price {
+  @media (min-width: $tablet-width) {
+    margin-left: 50px;
+  }
+}
+
+.additional-products__button {
+  @media (min-width: $tablet-width) {
+    width: 100%;
+  }
 }
 
 .additional-products__present {
