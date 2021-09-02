@@ -9,11 +9,14 @@
 
   @media (min-width: $desktop-width) {
     padding-top: 53px;
-    position: absolute;
-    width: 100%;
-    z-index: 10;
-    background-color: transparent;
-  }
+    
+    &--main {
+        position: absolute;
+        width: 100%;
+        z-index: 10;
+        background-color: transparent;
+      }
+    }
 }
 
 .page-header__wrapper {
