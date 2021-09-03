@@ -1,7 +1,6 @@
 .social {
   border-top: 1px solid $grey-line;
   border-bottom: 1px solid $grey-line;
-  width: 100%;
 
   @media (min-width: $tablet-width) {
     border: none;
@@ -19,4 +18,55 @@
 
 .social__link {
   text-decoration: none;
+}
+
+.social__link--vkontakte svg {
+  fill: $special_grey-2;
+
+  @media (min-width: $tablet-width) {
+    width: 30px;
+    height: 22px;
+  }
+
+  &:hover {
+    fill: $basic_green;
+  }
+
+  &:active {
+    fill: rgba($color: $basic_green, $alpha: 0.3);
+  }
+}
+
+.social__link--instagram svg {
+  fill: $special_grey-2;
+
+  @media (min-width: $tablet-width) {
+    width: 23px;
+    height: 23px;
+  }
+
+  &:hover {
+    fill: $basic_green;
+  }
+
+  &:active {
+    fill: rgba($color: $basic_green, $alpha: 0.3);
+  }
+}
+
+.social__link--facebook svg {
+  stroke: $special_grey-2;
+
+  @media (min-width: $tablet-width) {
+    width: 28px;
+    height: 33px;
+  }
+
+  &:hover {
+    stroke: $basic_green;
+  }
+
+  &:active {
+    stroke: rgba($color: $basic_green, $alpha: 0.3);
+  }
 }

@@ -15,35 +15,107 @@
   }
 }
 
-.features__list {
-  @include list-reset;
-  display: flex;
-  flex-direction: column;
+.features__title {
+  margin-bottom: 38px;
 
   @media (min-width: $tablet-width) {
-    flex-direction: row;
-    flex-wrap: wrap;
+    margin-bottom: 72px;
+  }
+}
+
+.features__list {
+  @include list-reset;
+  display: grid;
+  grid-template-columns: auto;
+  grid-auto-rows: minmax(60px, auto);
+  grid-gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 247px 249px;
+    grid-column-gap: 153px;
+    grid-row-gap: 95px;
+    counter-reset: li;
   }
 
   @media (min-width: $desktop-width) {
-    justify-content: space-between;
+    grid-template-columns: 230px 246px 248px 250px;
+    grid-column-gap: 83px;
   }
 }
 
 .features__list-item {
+  position: relative;
+
   @include basic-text-mobile;
 
   @media (min-width: $tablet-width) {
-    width: 230px;
-
-    &:nth-child(2n) {
-      margin-left: 153px;
+    &::after {
+      counter-increment: li;
+      content: counter(li);
+      font-family: "Oswald", "Arial", sans-serif;
+      font-size: 280px;
+      color: $basic-grey;
+      position: absolute;
+      top: 93px;
+      right: 0;
+      z-index: -1;
     }
   }
+}
 
-  @media (min-width: $desktop-width) {
-    &:nth-child(2n) {
-      margin-left: 0;
+.features__list-item .features__description {
+  &::before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    background-color: $basic_green;
+    background-position: 50% 50%;
+    background-size: 30px 32px;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    @media (min-width: $tablet-width) {
+      width: 80px;
+      height: 80px;
     }
+  }
+}
+
+.features__list-item--leaf .features__description {
+  &::before {
+    background-image: url("../../img/icon_leaf.svg");
+  }
+}
+
+.features__list-item--tub .features__description {
+  &::before {
+    background-image: url("../../img/icon_tub.svg");
+  }
+}
+
+.features__list-item--eat .features__description {
+  &::before {
+    background-image: url("../../img/icon_eat.svg");
+  }
+}
+
+.features__list-item--alarm .features__description {
+  &::before {
+    background-image: url("../../img/icon_alarm.svg");
+  }
+}
+
+.features__description {
+  margin: 0;
+  padding-left: 80px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 115px;
+    padding-bottom: 57px;
+    padding-left: 0;
   }
 }

@@ -1,7 +1,12 @@
 .site-list {
   @include list-reset;
   color: $basic_black;
+  background-color: $basic_white;
   text-align: center;
+
+  @media (min-width: $desktop-width) {
+    background: inherit;
+  }
 }
 
 .site-list__item {
@@ -15,9 +20,51 @@
   @media (max-width: $mobile-width-only) {
     border-top: 1px solid $grey-nav-border;
   }
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+    padding-top: 0;
+    padding-bottom: 10px;
+
+    &--active {
+      border-bottom: 2px solid $basic_green;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+    line-height: 30px;
+
+    &--active {
+      border-bottom: 2px solid $basic_white;
+    }
+  }
 }
 
 .site-list__link {
   text-decoration: none;
   color: $basic_black;
+
+  // &:hover {
+  //   color: rgba($color: $basic_black, $alpha: 0.6);  Стили для меню на внутренних страницах на десктопной версии
+  // }
+
+  // &:active {
+  //   color: rgba($color: $basic_black, $alpha: 0.3);
+  // }
+
+  @media (min-width: $desktop-width) {
+    color: $basic_white;
+    padding-bottom: 8px;
+
+    &:hover {
+      color: rgba($color: $basic_white, $alpha: 0.6);
+    }
+
+    &:active {
+      color: rgba($color: $basic_white, $alpha: 0.3);
+    }
+  }
 }

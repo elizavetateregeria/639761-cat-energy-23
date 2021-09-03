@@ -11,12 +11,6 @@
 }
 
 .page-footer__contacts {
-  padding-top: 28px;
-
-  @media (min-width: $tablet-width) {
-    padding-top: 62px;
-  }
-
   @media (min-width: $desktop-width) {
     padding-top: 0;
     position: relative;
@@ -33,10 +27,49 @@
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
+    justify-content: space-between;
     padding-top: 55px;
   }
 
   @media (min-width: $desktop-width) {
     padding-top: 57px;
+  }
+}
+
+.page-footer__logo {
+  padding-bottom: 27px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 33%;
+    padding-bottom: 0;
+  }
+}
+
+.page-footer__social {
+  padding-top: 20px;
+  padding-bottom: 17px;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    width: 33%;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.page-footer__copyright {
+  padding-top: 22px;
+
+  @media (min-width: $tablet-width) {
+    width: 33%;
+    padding-top: 0;
   }
 }
