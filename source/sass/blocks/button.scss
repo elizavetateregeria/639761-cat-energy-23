@@ -22,7 +22,7 @@
     line-height: 18px;
 
     @media (min-width: $tablet-width) {
-      padding: 13px 26px;
+      padding: 17px 26px;
       font-size: 20px;
       line-height: 20px;
     }
@@ -32,6 +32,14 @@
     display: block;
     background-color: $basic_grey;
     color: $special_dark-grey;
+  }
+
+  &--form {
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
   }
 }
 

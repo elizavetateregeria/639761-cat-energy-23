@@ -129,6 +129,7 @@
   @include basic-text-mobile;
   padding-bottom: 22px;
   margin-bottom: 20px;
+  margin-top: 0;
   border-bottom: 1px solid $grey-line;
 
   @media (min-width: $tablet-width) {
