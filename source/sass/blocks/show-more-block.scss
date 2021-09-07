@@ -36,6 +36,11 @@
     margin-bottom: 23px;
   }
 
+  @media (min-width: $desktop-width) {
+    padding-right: 15px;
+    padding-left: 20px;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -67,5 +72,9 @@
     padding-left: 40px;
     padding-right: 40px;
     margin-bottom: 87px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
   }
 }

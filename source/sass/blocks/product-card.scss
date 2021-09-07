@@ -22,6 +22,10 @@
     flex-direction: column;
     align-items: center;
   }
+
+  @media (min-width: $desktop-width) {
+    padding: 20px 38px 40px;
+  }
 }
 
 .product-card__img {
@@ -47,8 +51,6 @@
 .product-card__title {
   margin-top: 0;
   margin-bottom: 14px;
-  padding-right: 50px;
-  padding-left: 50px;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
@@ -57,7 +59,17 @@
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 24px;
+    padding-right: 50px;
+    padding-left: 50px;
+    margin-bottom: 21px;
     text-align: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    line-height: 21px;
+    padding-right: 15px;
+    padding-left: 20px;
+    margin-bottom: 21px;
   }
 }
 
