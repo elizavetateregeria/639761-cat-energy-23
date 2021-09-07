@@ -1,6 +1,18 @@
 .order {
-  padding: 27px 0 32px;
+  padding-top: 27px;
+  padding-bottom: 32px;
   border-top: 1px solid $grey-line;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 65px;
+    padding-bottom: 72px;
+    border: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 77px;
+    padding-bottom: 82px;
+  }
 }
 
 .order .wrapper {
@@ -24,14 +36,35 @@
 
 .order__title {
   margin-bottom: 37px;
+  margin-top: 0;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 54px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 56px;
+  }
 }
 
 .order__text {
+  margin-top: 0;
   margin-bottom: 39px;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 66px;
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .order__note {
   font-family: "Arial", sans-serif;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 16px;
+  }
 }
