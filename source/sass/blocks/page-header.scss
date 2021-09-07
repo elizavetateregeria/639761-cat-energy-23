@@ -1,22 +1,24 @@
 .page-header {
   min-height: 65px;
   padding-top: 14px;
+  padding-bottom: 13px; //заменяет margin-bottom у лого, настолько же пришлось подвинуть main-nav !!! уточнить у наставника !!!
   color: $basic_black;
 
   @media (min-width: $tablet-width) {
     padding-top: 26px;
+    padding-bottom: 0;
   }
 
   @media (min-width: $desktop-width) {
     padding-top: 53px;
-    
+
     &--main {
-        position: absolute;
-        width: 100%;
-        z-index: 10;
-        background-color: transparent;
-      }
+      position: absolute;
+      width: 100%;
+      z-index: 10;
+      background-color: transparent;
     }
+  }
 }
 
 .page-header__wrapper {
@@ -40,8 +42,7 @@
   justify-content: flex-start;
   align-items: center;
   padding-left: 20px;
-  margin-bottom: 13px;
-  margin-right: 44px;
+  padding-right: 44px;
 
   &:hover {
     opacity: 0.8;
@@ -54,8 +55,8 @@
   @media (min-width: $tablet-width) {
     height: 52px;
     width: 174px; //возможно удалить, когда вставишь логотип для планшетной версии
-    margin-bottom: 0;
-    margin-right: 0;
+    padding-right: 0;
+    padding-bottom: 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -65,9 +66,10 @@
 }
 
 .page-header__logo-title {
-  margin-left: 57px;
+  width: auto;
+  padding-left: 57px;
 
   @media (min-width: $tablet-width) {
-    margin-left: 0;
+    padding-left: 0;
   }
 }
