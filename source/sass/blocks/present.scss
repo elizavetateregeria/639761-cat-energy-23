@@ -4,9 +4,19 @@
   padding-bottom: 43px;
   min-height: 290px;
   background-color: $basic_green;
-  background-image: url("../../img/gift-mobile-bg.jpg");
+  background: linear-gradient(to left, rgba(104, 183, 56, 0.85) 50%, rgba(104, 183, 56, 0.85) 50%),
+    url("../../img/gift-mobile-bg.jpg");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-position: center;
+  background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background: linear-gradient(to left, rgba(104, 183, 56, 0.85) 50%, rgba(104, 183, 56, 0.85) 50%),
+    url("../../img/gift-mobile-bg@2x.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 
   @media (min-width: $tablet-width) {
     padding-top: 71px;
@@ -16,6 +26,14 @@
       url("../../img/gift-tablet-bg.jpg");
     background-position: 0 50%;
     background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background: linear-gradient(to left, rgba(104, 183, 56, 0.85) 50%, rgba(104, 183, 56, 0.85) 50%),
+        url("../../img/gift-tablet-bg@2x.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -25,6 +43,13 @@
       url("../../img/gift-desktop-bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background: linear-gradient(to left, rgba(104, 183, 56, 0.85) 50%, rgba(104, 183, 56, 0.85) 50%),
+        url("../../img/gift-desktop-bg@2x.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
   }
 }
 
