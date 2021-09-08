@@ -18,19 +18,27 @@
 .order .wrapper {
   padding: 0;
 
-  @media (min-width: $tablet-width) {
-    padding: 0 67px 0 71px;
-  }
+  // @media (min-width: $tablet-width) { //для декоративной зеленой линии
+  //   padding: 0 67px 0 71px;
+  // }
 
-  @media (min-width: $desktop-width) {
-    padding: 0 110px;
-  }
+  // @media (min-width: $desktop-width) { //для декоративной зеленой линии
+  //   padding: 0 110px;
+  // }
 }
 
 .order__title,
 .order__text {
   @media (max-width: $mobile-width-only) {
     @include text-wrap;
+  }
+
+  @media (min-width: $tablet-width) {
+    @include text-wrap(none, 0 67px 0 71px); // добавлено для декоративной зеленой линии в заголовках
+  }
+
+  @media (min-width: $desktop-width) {
+    @include text-wrap(none, 0 110px); // добавлено для декоративной зеленой линии в заголовках
   }
 }
 
