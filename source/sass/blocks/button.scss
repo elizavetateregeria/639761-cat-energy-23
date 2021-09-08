@@ -32,6 +32,14 @@
     display: block;
     background-color: $basic_grey;
     color: $special_dark-grey;
+
+    &:hover {
+      background-color: $basic_grey-2;
+    }
+
+    &:active {
+      color: rgba($color: $special_dark-grey, $alpha: 0.3);
+    }
   }
 
   &--form {
