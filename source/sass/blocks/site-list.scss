@@ -21,6 +21,7 @@
     border-top: 1px solid $grey-nav-border;
   }
 
+
   @media (min-width: $tablet-width) {
     font-size: 18px;
     line-height: 24px;
@@ -36,35 +37,40 @@
   @media (min-width: $desktop-width) {
     font-size: 20px;
     line-height: 30px;
-
-    &--active {
-      border-bottom: 2px solid $basic_white;
-    }
   }
 }
+
+.site-list__item--main.site-list__item--active {
+  @media (min-width: $desktop-width) {
+    border-bottom: 2px solid $basic_white;
+  }
+}
+
 
 .site-list__link {
   text-decoration: none;
   color: $basic_black;
 
-  // &:hover {
-  //   color: rgba($color: $basic_black, $alpha: 0.6);  Стили для меню на внутренних страницах на десктопной версии
-  // }
+  &:hover {
+    color: rgba($color: $basic_black, $alpha: 0.6);
+  }
 
-  // &:active {
-  //   color: rgba($color: $basic_black, $alpha: 0.3);
-  // }
+  &:active {
+    color: rgba($color: $basic_black, $alpha: 0.3);
+  }
 
-  @media (min-width: $desktop-width) {
-    color: $basic_white;
-    padding-bottom: 8px;
+  &--main {
+    @media (min-width: $desktop-width) {
+      color: $basic_white;
+      padding-bottom: 8px;
 
-    &:hover {
-      color: rgba($color: $basic_white, $alpha: 0.6);
-    }
+      &:hover {
+        color: rgba($color: $basic_white, $alpha: 0.6);
+      }
 
-    &:active {
-      color: rgba($color: $basic_white, $alpha: 0.3);
+      &:active {
+        color: rgba($color: $basic_white, $alpha: 0.3);
+      }
     }
   }
 }

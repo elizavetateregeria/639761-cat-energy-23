@@ -108,7 +108,7 @@
 
 .example__info-description {
   position: absolute;
-  top: 36px;
+  bottom: -26px;
   left: 50%;
   padding-left: 15px;
   padding-right: 15px;
@@ -124,7 +124,7 @@
     font-size: 14px;
     line-height: 14px;
     background-color: $basic_white;
-    top: 50px;
+    bottom: -20px;
     padding-right: 8px;
     padding-left: 8px;
   }

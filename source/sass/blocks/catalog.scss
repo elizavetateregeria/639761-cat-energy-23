@@ -1,6 +1,13 @@
 .catalog {
-  padding: 27px 0 25px;
+  padding-top: 27px;
+  padding-bottom: 25px;
   border-top: 1px solid $basic_grey-2;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 65px;
+    padding-bottom: 68px;
+    border-top: none;
+  }
 }
 
 .catalog .wrapper {
@@ -12,7 +19,11 @@
 .catalog__title {
   @media (max-width: $mobile-width-only) {
     @include text-wrap;
-    margin-bottom: 47px;
+    margin-bottom: 41px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 82px;
   }
 }
 

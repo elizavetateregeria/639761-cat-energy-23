@@ -1,20 +1,84 @@
 .present {
-  padding-bottom: 35px;
+  position: relative;
+  padding-top: 185px;
+  padding-bottom: 43px;
   min-height: 290px;
+  background-color: $basic_green;
+  background-image: url("../../img/gift-mobile-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 71px;
+    padding-bottom: 69px;
+    min-height: 200px;
+    background: linear-gradient(to left, rgba(104, 183, 56, 0.85) 50%, rgba(104, 183, 56, 0.85) 50%),
+      url("../../img/gift-tablet-bg.jpg");
+    background-position: 0 50%;
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 185px;
+    padding-bottom: 42px;
+    background: linear-gradient(to left, rgba(104, 183, 56, 0.85) 50%, rgba(104, 183, 56, 0.85) 50%),
+      url("../../img/gift-desktop-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 }
 
 .present__content {
-  background-color: $basic_green;
-  background-image: url("../../img/gift-mobile-bg.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
   color: $basic_white;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    text-align: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: center;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 59px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 78px;
+    height: 80px;
+    background-image: url("../../img/icon_gift.svg");
+    background-repeat: no-repeat;
+
+
+    @media (min-width: $tablet-width) {
+      width: 80px;
+      height: 82px;
+      top: 57px;
+      left: 77px;
+      transform: translateX(0);
+    }
+
+    @media (min-width: $desktop-width) {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
 }
 
 .present__text {
+  margin: 0;
   font-family: "Arial", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 422px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 0;
+  }
 }

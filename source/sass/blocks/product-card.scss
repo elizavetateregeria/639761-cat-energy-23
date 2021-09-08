@@ -10,16 +10,21 @@
   width: 100%;
   max-width: 550px;
   margin: 0 auto;
-  padding: 20px 20px 15px;
+  padding: 20px 20px 24px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-end;
 
   @media (min-width: $tablet-width) {
+    padding: 20px 37px 39px;
     background-color: $basic_grey;
     flex-direction: column;
     align-items: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 20px 38px 40px;
   }
 }
 
@@ -27,6 +32,7 @@
   width: 50%;
   margin: 0;
   text-align: center;
+  align-self: center;
 
   @media (min-width: $tablet-width) {
     width: 168px;
@@ -36,14 +42,41 @@
 
 .product-card__info {
   width: 50%;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+  }
 }
 
 .product-card__title {
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 14px;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+    padding-right: 50px;
+    padding-left: 50px;
+    margin-bottom: 21px;
+    text-align: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    line-height: 21px;
+    padding-right: 15px;
+    padding-left: 20px;
+    margin-bottom: 21px;
+  }
+}
+
+.product-card__title br {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .product-card__link {
@@ -54,18 +87,46 @@
 .product-card__properties {
   @include basic-text-mobile(16px, 12px);
   width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 9px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 16px;
+    margin-bottom: 0;
+  }
+}
+
+.product-card__properties tr {
+  @media (min-width: $tablet-width) {
+    border-bottom: 1px solid $special_grey;
+  }
+}
+
+.product-card__properties td,
+.product-card__properties th {
+  @media (min-width: $tablet-width) {
+    padding-bottom: 9px;
+    padding-top: 5px;
+  }
 }
 
 .product-card__properties-category {
   font-weight: 400;
   text-align-last: left;
+  padding: 0;
 }
 
 .product-card__properties-value {
   text-align: right;
+  padding: 0;
 }
 
 .product-card__button {
   margin-top: 13px;
   width: 100%;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 33px;
+  }
 }
