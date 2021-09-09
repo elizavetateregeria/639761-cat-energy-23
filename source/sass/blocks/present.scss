@@ -4,7 +4,7 @@
   padding-bottom: 43px;
   min-height: 290px;
   background-color: $basic_green;
-  background: linear-gradient(to left, rgba(104, 183, 56, 0.85) 50%, rgba(104, 183, 56, 0.85) 50%),
+  background-image: linear-gradient(to left, rgba(104, 183, 56, 0.85) 50%, rgba(104, 183, 56, 0.85) 50%),
     url("../../img/gift-mobile-bg.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -12,7 +12,7 @@
 
   @media (min-resolution: 2dppx) {
     background: linear-gradient(to left, rgba(104, 183, 56, 0.85) 50%, rgba(104, 183, 56, 0.85) 50%),
-    url("../../img/gift-mobile-bg@2x.jpg");
+      url("../../img/gift-mobile-bg@2x.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

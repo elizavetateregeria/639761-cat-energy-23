@@ -11,7 +11,7 @@
 
   @media (min-resolution: 2dppx) {
     background: linear-gradient(rgba(104, 183, 56, 0.85) 302px, $basic_white 302px),
-    url("../../img/index-background@2x.jpg");
+      url("../../img/index-background@2x.jpg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: top center;
@@ -35,7 +35,7 @@
 
     @media (min-resolution: 2dppx) {
       background: linear-gradient(to left, rgba(104, 183, 56, 0.85) 50%, $basic_white 50%),
-      url("../../img/index-background-desktop@2x.jpg");
+        url("../../img/index-background-desktop@2x.jpg");
       background-position: top right;
       background-size: contain;
       background-repeat: no-repeat;
