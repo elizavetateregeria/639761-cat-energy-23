@@ -4,6 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>HTML Academy: Кэт энерджи</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/apple.png">
+    <link rel="manifest" href="manifest.webmanifest">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
@@ -41,7 +45,11 @@
             <a class="promo__button button button--promo" href="form.html">подобрать программу</a>
           </div>
           <div class="promo__image">
-            <img src="img/index-can-mobile.png" width="280" height="270" alt="Банка функционального питания 'Кэт энерджи' с курицей">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/index-can-desktop.png 1x, img/index-can-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/index-can-tablet.png 1x, img/index-can-tablet@2x.png 2x">
+              <img class="promo__image-img img-fluid" src="img/index-can-mobile.png" srcset="img/index-can-mobile@2x.png 2x" width="280" height="270" alt="Банка функционального питания 'Кэт энерджи' с курицей">
+            </picture>
           </div>
         </div>
       </section>
@@ -102,8 +110,14 @@
           </div>
           <div class="example__result">
             <div class="example__result-container">
-              <img class="example__result-img example__result-img--after img-fluid" src="img/after-mobile.png" width="251" height="240" alt="Фото кота Бориса после применения 'Кэт Энерджи Слим'">
-              <img class="example__result-img example__result-img--before img-fluid" src="img/before-mobile.png" width="311" height="232" alt="Фото кота Бориса до применения 'Кэт Энерджи Слим'">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/after-tablet.png 1x, img/after-tablet@2x.png 2x">
+                <img class="example__result-img example__result-img--after img-fluid" src="img/after-mobile.png" width="251" height="240" alt="Фото кота Бориса после применения 'Кэт Энерджи Слим'">
+              </picture>
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/before-tablet.png 1x, img/before-tablet@2x.png 2x">
+                <img class="example__result-img example__result-img--before img-fluid" src="img/before-mobile.png" width="311" height="232" alt="Фото кота Бориса до применения 'Кэт Энерджи Слим'">
+              </picture>
             </div>
             <div class="example__result-control">
               <span class="example__result-state example__result-state--before">Было</span>
