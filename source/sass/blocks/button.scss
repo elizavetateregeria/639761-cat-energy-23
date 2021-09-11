@@ -9,12 +9,14 @@
   font-size: 16px;
   line-height: 20px;
 
-  &:hover {
-    background-color: $basic_green-2;
-  }
+  @media (min-width: $desktop-width) {
+    &:hover {
+      background-color: $basic_green-2;
+    }
 
-  &:active {
-    color: rgba($color: $basic_white, $alpha: 0.6);
+    &:active {
+      color: rgba($color: $basic_white, $alpha: 0.6);
+    }
   }
 
   &--promo {
@@ -33,12 +35,14 @@
     background-color: $basic_grey;
     color: $special_dark-grey;
 
-    &:hover {
-      background-color: $basic_grey-2;
-    }
+    @media (min-width: $desktop-width) {
+        &:hover {
+        background-color: $basic_grey-2;
+      }
 
-    &:active {
-      color: rgba($color: $special_dark-grey, $alpha: 0.3);
+      &:active {
+        color: rgba($color: $special_dark-grey, $alpha: 0.3);
+      }
     }
   }
 
