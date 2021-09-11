@@ -20,7 +20,7 @@
   text-decoration: none;
 }
 
-.social__link--vkontakte svg {
+.social__icon--vkontakte {
   fill: $special_grey-2;
 
   @media (min-width: $tablet-width) {
@@ -37,7 +37,7 @@
   }
 }
 
-.social__link--instagram svg {
+.social__icon--instagram {
   fill: $special_grey-2;
 
   @media (min-width: $tablet-width) {
@@ -54,7 +54,7 @@
   }
 }
 
-.social__link--facebook svg {
+.social__icon--facebook {
   stroke: $special_grey-2;
 
   @media (min-width: $tablet-width) {
