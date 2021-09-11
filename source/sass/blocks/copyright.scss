@@ -13,26 +13,26 @@
   }
 }
 
-.copyright__link svg {
+.copyright__link:hover .copyright__icon {
+  fill: $basic_green;
+}
+
+.copyright__link:active .copyright__icon {
+  fill: rgba($color: $basic_green, $alpha: 0.3);
+}
+
+.copyright__link:active .copyright__text {
+  color: rgba($color: $special_dark-grey, $alpha: 0.3);
+}
+
+.copyright__icon {
   fill: $special_grey-2;
   width: 39px;
   height: 39px;
-
-  &:hover {
-    fill: $basic_green;
-  }
-
-  &:active {
-    fill: rgba($color: $basic_green, $alpha: 0.3);
-  }
 }
 
 .copyright__text {
   @include basic-text-mobile(18.4px, 16px);
-
-  &:active {
-    color: rgba($color: $special_dark-grey, $alpha: 0.3);
-  }
 
   @media (min-width: $tablet-width) {
     margin-right: 17px;
