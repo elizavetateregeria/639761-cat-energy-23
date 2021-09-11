@@ -23,7 +23,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 82px;
+    margin-bottom: 162px;
   }
 }
 
@@ -36,12 +36,13 @@
     justify-content: start;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(324px, 1fr));
-    grid-gap: 60px;
+    grid-row-gap: 137px;
+    grid-column-gap: 60px;
   }
 
   @media (min-width: $desktop-width) {
     grid-template-columns: repeat(auto-fill, minmax(245px, 1fr));
     grid-column-gap: 80px;
-    grid-row-gap: 62px;
+    grid-row-gap: 140px;
   }
 }
