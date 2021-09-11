@@ -36,7 +36,7 @@
     color: $special_dark-grey;
 
     @media (min-width: $desktop-width) {
-        &:hover {
+      &:hover {
         background-color: $basic_grey-2;
       }
 
