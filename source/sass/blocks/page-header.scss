@@ -53,15 +53,42 @@
   }
 
   @media (min-width: $tablet-width) {
-    height: 52px;
-    width: 174px; //возможно удалить, когда вставишь логотип для планшетной версии
+    padding-left: 0;
     padding-right: 0;
     padding-bottom: 0;
+    height: 52px;
   }
 
   @media (min-width: $desktop-width) {
     height: 59px;
-    width: 202px; //возможно удалить, когда вставишь логотип для планшетной версии
+  }
+}
+
+.page-header__logo-img {
+  &--tablet {
+    display: none;
+  }
+
+  &--desktop {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: none;
+
+    &--tablet {
+      display: block;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--tablet {
+      display: none;
+    }
+
+    &--desktop {
+      display: block;
+    }
   }
 }
 
@@ -70,6 +97,6 @@
   padding-left: 57px;
 
   @media (min-width: $tablet-width) {
-    padding-left: 0;
+    display: none;
   }
 }

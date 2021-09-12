@@ -12,3 +12,20 @@ NAV_TOGGLE.addEventListener("click", function () {
     NAV_MAIN.classList.add('main-nav--closed');
   }
 });
+
+
+function initMap() {
+  const CAT_ENERGY = { lat: 59.938850840429865, lng: 30.32307958505938 };
+  const MAP = new google.maps.Map(document.getElementById("map"), {
+    center: CAT_ENERGY,
+    zoom: 18,
+  });
+
+  const ICON_MARKER = "../img/map-pin.png";
+
+  const MARKER = new google.maps.Marker({
+    position: CAT_ENERGY,
+    icon: ICON_MARKER,
+    map: MAP,
+  });
+}

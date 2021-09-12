@@ -16,7 +16,7 @@
   @media (min-width: $tablet-width) and (max-width: 1439px) {
     &::after {
       content: "";
-      background-image: url("../../img/cat_back_slim.svg");
+      background-image: url("../img/cat_back_slim.svg");
       background-repeat: no-repeat;
       background-size: contain;
       width: 200px;
@@ -32,7 +32,7 @@
   @media (min-width: $tablet-width) and (max-width: 1439px) {
     &::after {
       content: "";
-      background-image: url("../../img/cat_back_mass.svg");
+      background-image: url("../img/cat_back_mass.svg");
       background-repeat: no-repeat;
       background-size: contain;
       width: 268px;
@@ -70,7 +70,7 @@
 
     &::before {
       content: "";
-      background-image: url("../../img/cat_back_slim.svg");
+      background-image: url("../img/cat_back_slim.svg");
       width: 50px;
       height: 53px;
       position: absolute;
@@ -100,7 +100,7 @@
 
     &::before {
       content: "";
-      background-image: url("../../img/cat_back_mass.svg");
+      background-image: url("../img/cat_back_mass.svg");
       width: 67px;
       height: 50px;
       position: absolute;
@@ -161,7 +161,7 @@
     top: 5px;
     width: 32px;
     height: 10px;
-    background-image: url("../../img/icon_arrow.svg");
+    background-image: url("../img/icon_arrow.svg");
   }
 
   &:active {
