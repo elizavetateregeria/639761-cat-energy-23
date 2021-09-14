@@ -51,12 +51,14 @@
   text-decoration: none;
   color: $basic_black;
 
-  &:hover {
-    color: rgba($color: $basic_black, $alpha: 0.6);
-  }
+  @media (min-width: $desktop-width) {
+    &:hover {
+      color: rgba($color: $basic_black, $alpha: 0.6);
+    }
 
-  &:active {
-    color: rgba($color: $basic_black, $alpha: 0.3);
+    &:active {
+      color: rgba($color: $basic_black, $alpha: 0.3);
+    }
   }
 
   &--main {
