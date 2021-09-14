@@ -321,21 +321,46 @@
 }
 
 .form__fieldset--owner .form__text-input {
-  flex-grow: 1;
-  padding-right: 0;
-  margin-right: 14px;
-  border: none;
+  width: 100%;
+  padding-right: 33px;
+  border: 1px solid $grey-input-border;
+}
+
+.form__text-input-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+}
+
+.form__text-input-icon--phone {
+  fill: $grey-input-icon;
+}
+
+.form__text-input-icon--mail {
+  stroke: $grey-input-icon;
+}
+
+.form__text-input:focus+.form__text-input-icon--phone {
+  fill: $basic_green;
+}
+
+.form__text-input:focus+.form__text-input-icon--mail {
+  stroke: $basic_green;
+}
+
+.form__text-input:invalid+.form__text-input-icon--phone {
+  fill: $status_error;
+}
+
+.form__text-input:invalid+.form__text-input-icon--mail {
+  stroke: $status_error;
 }
 
 .form__input-wrapper {
-  border: 1px solid $grey-input-border;
+  position: relative;
   display: flex;
   align-items: center;
-  padding-right: 13px;
-
-  @media (min-width: $tablet-width) {
-    padding-right: 18px;
-  }
 }
 
 .form__fieldset--owner .form__title {
@@ -367,7 +392,7 @@
 .form__fieldset--owner .form__group {
   display: grid;
   grid-template-columns: auto 1fr;
-  grid-column-gap: 12px;
+  grid-column-gap: 20px;
   align-items: center;
 
   &:not(:last-child) {
