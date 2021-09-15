@@ -123,17 +123,21 @@
   font-size: 16px;
   line-height: 18px;
 
-  // &:hover {
-  //   outline: 1px solid $special_grey;
-  // }
+  &:hover {
+    outline: 1px solid $special_grey;
+    outline-offset: -1px;
+  }
 
-  // &:focus {
-  //   outline: 2px solid $special_dark-grey;
-  // }
+  &:focus {
+    outline: 2px solid $special_dark-grey;
+    outline-offset: -2px;
+    box-shadow: 0 4px 4px 0 rgba($color: #000000, $alpha: 0.25);
+  }
 
-  // &:invalid {
-  //   outline: 2px solid $status_error;
-  // }
+  &:invalid {
+    outline: 2px solid $status_error;
+    outline-offset: -2px;
+  }
 
   &::placeholder {
     text-transform: uppercase;
