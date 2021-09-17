@@ -2,13 +2,13 @@ const gulp = require("gulp");
 const plumber = require("gulp-plumber");
 const sourcemap = require("gulp-sourcemaps");
 const sass = require("gulp-sass");
-const squoosh = require("gulp-libsquoosh");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const del = require("del");
 const sync = require("browser-sync").create();
 const htmlmin = require("gulp-htmlmin");
 const terser = require("gulp-terser");
+const squoosh = require("gulp-libsquoosh");
 const webp = require("gulp-webp");
 const csso = require("postcss-csso");
 const rename = require("gulp-rename");
@@ -55,10 +55,11 @@ exports.scripts = scripts;
 //Images
 
 const optimizeImages = () => {
-  return gulp.src("source/img/**/*.{jpg,png,svg}")
+  return gulp.src("source/img/*.{png,jpg,svg}")
     .pipe(squoosh())
-    .pipe(gulp.dest("build/img"));
+    .pipe(gulp.dest("build/img"))
 }
+
 
 exports.optimizeImages = optimizeImages;
 
@@ -134,6 +135,8 @@ const watcher = () => {
   gulp.watch("source/js/app.js", gulp.series("scripts"));
   gulp.watch("source/*.html", gulp.series(html, reload));
 }
+
+exports.watcher = watcher;
 
 //Build
 const build = gulp.series(
