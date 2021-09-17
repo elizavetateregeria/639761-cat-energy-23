@@ -97,7 +97,7 @@
 }
 
 .features__description br {
-  @media(max-width: $mobile-width-only) {
+  @media (max-width: $mobile-width-only) {
     display: none;
   }
 }
