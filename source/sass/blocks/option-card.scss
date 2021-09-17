@@ -4,7 +4,7 @@
   background-color: $basic-grey;
 
   @media (min-width: $tablet-width) {
-    padding: 77px 315px 56px 52px;
+    padding: 75px 315px 60px 52px;
   }
 
   @media (min-width: $desktop-width) {
@@ -46,7 +46,7 @@
 
 .option-card__title {
   margin-top: 0;
-  margin-bottom: 29px;
+  margin-bottom: 30px;
   font-size: 24px;
   font-weight: 400;
   line-height: 37px;
@@ -59,7 +59,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 73px;
+    margin-bottom: 74px;
   }
 }
 
@@ -127,7 +127,7 @@
 
 .option-card__description {
   @include basic-text-mobile;
-  padding-bottom: 22px;
+  padding-bottom: 21px;
   margin-bottom: 20px;
   margin-top: 0;
   border-bottom: 1px solid $grey-line;
@@ -141,7 +141,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 23px;
+    margin-bottom: 26px;
   }
 }
 
@@ -173,8 +173,8 @@
     line-height: 30px;
 
     &::after {
-      top: 10px;
-      right: -56px;
+      top: 8px;
+      right: -58px;
     }
   }
 }

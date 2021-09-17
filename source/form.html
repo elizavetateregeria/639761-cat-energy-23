@@ -8,6 +8,8 @@
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple.png">
     <link rel="manifest" href="manifest.webmanifest">
+    <link rel="preload" href="fonts/oswaldregular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswaldmedium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="page__body">
@@ -57,7 +59,7 @@
                 <div class="form__wrapper">
                   <div class="form__group">
                     <label class="form__label form__label--text" for="cat-name">ИМЯ:*</label>
-                    <input class="form__text-input" type="text" id="cat-name" name="cat" required placeholder="барсик">
+                    <input class="form__text-input" type="text" id="cat-name" name="cat" required placeholder="барсик" pattern=".*\S.*">
                   </div>
                   <div class="form__group">
                     <label class="form__label form__label--text" for="cat-weight">Вес (кг):*</label>
@@ -96,8 +98,8 @@
               </fieldset>
             </div>
             <fieldset class="form__fieldset form__fieldset--owner">
-              <p class="form__title">Контактные данные <br>(владельца кота)</p>
               <div class="form__wrapper">
+                <p class="form__title">Контактные данные <br>(владельца кота)</p>
                 <div class="form__group">
                   <label class="form__label form__label--text" for="owner-email">E-mail:*</label>
                   <div class="form__input-wrapper">
@@ -119,14 +121,14 @@
               </div>
             </fieldset>
             <fieldset class="form__fieldset form__fieldset--comment">
-              <p class="form__title">Комментарий</p>
               <div class="form__wrapper">
+                <p class="form__title">Комментарий</p>
                 <textarea class="form__textarea" name="habit" id="cat-habit" placeholder="Расскажите обо всех повАдках кота"></textarea>
               </div>
             </fieldset>
             <fieldset class="form__fieldset form__fieldset--additional">
-              <p class="form__title">Дополнительно</p>
               <div class="form__wrapper">
+                <p class="form__title">Дополнительно</p>
                 <div class="form__group">
                   <label class="form__label form__label--checkbox" for="add-sweetener">
                     <input class="form__checkbox" type="checkbox" name="sweetener" id="add-sweetener" checked>
@@ -172,12 +174,11 @@
           <p class="contacts__slogan">приглашаем<br>к сотрудничеству<br>дилеров!</p>
           <p class="contacts__address">ул. Большая<br>Конюшенная, д. 19/8<br>Санкт-Петербург</p>
         </div>
-        <div class="contacts__map" id="map">
-          <script
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhVBMZINk8f48H9OhwELtc8Pxew7YfoTk&callback=initMap&libraries=&v=weekly"
-            async>
-          </script>
-        </div>
+        <div class="contacts__map" id="map"></div>
+        <script
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhVBMZINk8f48H9OhwELtc8Pxew7YfoTk&callback=initMap&libraries=&v=weekly"
+          async>
+        </script>
       </div>
       <div class="wrapper page-footer__bottom-wrapper">
         <a class="page-footer__logo">

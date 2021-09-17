@@ -1,8 +1,15 @@
 .form__fieldset-container {
+  margin-bottom: 26px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 75px;
+  }
+
   @media (min-width: $desktop-width) {
     display: flex;
     justify-content: space-between;
     padding: 0 110px;
+    margin-bottom: 69px;
   }
 }
 
@@ -36,7 +43,7 @@
       border: none; // добавлено для декоративной зеленой линии в заголовках
       padding: 0 67px 0 71px; // добавлено для декоративной зеленой линии в заголовках
       // border: 1px solid $grey-input-border; //для зелёной линии
-      // padding: 25px 28px;
+      // padding: 25px 28px; //для зелёной линии
     }
 
     @media (min-width: $desktop-width) {
@@ -46,16 +53,13 @@
   }
 
   &--owner {
-    padding-top: 26px;
     padding-bottom: 24px;
 
     @media (min-width: $tablet-width) {
-      padding-top: 75px;
       padding-bottom: 65px;
     }
 
     @media (min-width: $desktop-width) {
-      padding-top: 69px;
       padding-bottom: 69px;
     }
   }
@@ -82,6 +86,7 @@
   margin: 0 auto;
   padding: 0 20px;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
 
   @media (max-width: $mobile-width-only) {
@@ -134,11 +139,6 @@
     box-shadow: 0 4px 4px 0 rgba($color: #000000, $alpha: 0.25);
   }
 
-  &:invalid {
-    outline: 2px solid $status_error;
-    outline-offset: -2px;
-  }
-
   &::placeholder {
     text-transform: uppercase;
     color: $special_dark-grey;
@@ -153,6 +153,11 @@
 .form__text-input {
   padding: 13px 14px 14px 14px;
 
+  &:invalid:not(:placeholder-shown) {
+    outline: 2px solid $status_error;
+    outline-offset: -2px;
+  }
+
   @media (min-width: $tablet-width) {
     padding: 11px 19px;
   }
@@ -161,37 +166,33 @@
 .form__title {
   font-size: 24px;
   line-height: 26px;
-
-  @media (max-width: $mobile-width-only) {
-    @include text-wrap;
-  }
+  width: max-content;
+  padding: 0 22px;
+  margin-left: -22px;
+  background-color: $basic_white;
 
   @media (min-width: $tablet-width) {
-    @include text-wrap(none, 0 67px 0 71px);  // добавлено для декоративной зеленой линии в заголовках
 
     font-size: 36px;
     line-height: 36px;
-  }
-
-  @media (min-width: $desktop-width) {
-    @include text-wrap(1440, 0 110px); // добавлено для декоративной зеленой линии в заголовках
+    padding: 0 40px;
+    margin-left: -40px;
   }
 
   &::after {
     content: "";
     position: absolute;
+    display: block;
     height: 2px;
     width: 100%;
     background-color: $basic_green;
-  }
+    left: 0;
+    top: 0;
+    z-index: -2;
+    transform: translateY(15px);
 
-  &::before {
     @media (min-width: $tablet-width) {
-      content: "";
-      position: absolute;
-      height: 2px;
-      width: 100%;
-      background-color: $basic_green;
+      transform: translateY(22px);
     }
   }
 }
@@ -242,8 +243,8 @@
 
 .form__fieldset--program-choice .form__wrapper {
   @media (min-width: $tablet-width) {
-    border: 1px solid $grey-input-border;
-    padding: 25px 28px;
+    border: 1px solid $grey-input-border; // добавлено для декоративной зеленой линии в заголовках
+    padding: 25px 28px; // добавлено для декоративной зеленой линии в заголовках
   }
 }
 
@@ -280,9 +281,10 @@
   }
 }
 
-// .form__radio:focus + .form__radio-button { // Фокус для радиокнопок срабатывает только на выбранной кнопке
-//   outline: 1px solid red;
-// }
+.form__radio:focus + .form__radio-button {
+  box-shadow: 0 3px 5px rgba($color: #000000, $alpha: 0.2),
+    0 0 0 1px $basic_green;
+}
 
 .form__radio:hover + .form__radio-button {
   border-color: #bababa;
@@ -314,60 +316,72 @@
 /* FIELDSET OWNER CONTACTS */
 
 .form__fieldset--owner .form__wrapper {
+  flex-wrap: nowrap;                    //!!!!!!СПРОСИТЬ НАСТАВНИКА ПОЧЕМУ ЭТО НЕ ПОЗВОЛЯЕТ INPUT РАСТЯГИВАТЬСЯ НА ВСЮ ШИРИНУ
+
   @media (min-width: $desktop-width) {
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 }
 
 .form__fieldset--owner .form__text-input {
-  flex-grow: 1;
-  padding-right: 0;
-  margin-right: 14px;
-  border: none;
+  width: 100%;
+  padding-right: 33px;
+  border: 1px solid $grey-input-border;
+}
+
+.form__text-input-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+}
+
+.form__text-input-icon--phone {
+  fill: $grey-input-icon;
+}
+
+.form__text-input-icon--mail {
+  stroke: $grey-input-icon;
+}
+
+.form__text-input:focus + .form__text-input-icon--phone {
+  fill: $basic_green;
+}
+
+.form__text-input:focus + .form__text-input-icon--mail {
+  stroke: $basic_green;
+}
+
+.form__text-input:invalid:not(:placeholder-shown) + .form__text-input-icon--phone {
+  fill: $status_error;
+}
+
+.form__text-input:invalid:not(:placeholder-shown) + .form__text-input-icon--mail {
+  stroke: $status_error;
 }
 
 .form__input-wrapper {
-  border: 1px solid $grey-input-border;
+  position: relative;
   display: flex;
   align-items: center;
-  padding-right: 13px;
-
-  @media (min-width: $tablet-width) {
-    padding-right: 18px;
-  }
 }
 
 .form__fieldset--owner .form__title {
   margin-bottom: 35px;
+  margin-top: 0;
+  margin-right: 50%;
 
   @media (min-width: $tablet-width) {
-    margin-top: 0;
     margin-bottom: 76px;
-  }
-
-  &::after {
-    margin-top: -10px;
-    margin-left: 15%;
-
-    @media (min-width: $tablet-width) {
-      margin-top: 22px;
-      margin-left: 3%;
-    }
-  }
-
-  &::before {
-    @media (min-width: $tablet-width) {
-      margin-top: 22px;
-      margin-left: -103%;
-    }
   }
 }
 
 .form__fieldset--owner .form__group {
   display: grid;
   grid-template-columns: auto 1fr;
-  grid-column-gap: 12px;
+  grid-column-gap: 20px;
   align-items: center;
 
   &:not(:last-child) {
@@ -396,23 +410,6 @@
   @media (min-width: $tablet-width) {
     margin-bottom: 76px;
   }
-
-  &::after {
-    margin-top: 14px;
-    margin-left: 7%;
-
-    @media (min-width: $tablet-width) {
-      margin-top: 22px;
-      margin-left: 3%;
-    }
-  }
-
-  &::before {
-    @media (min-width: $tablet-width) {
-      margin-top: 22px;
-      margin-left: -103%;
-    }
-  }
 }
 
 .form__textarea {
@@ -430,7 +427,6 @@
 .form__fieldset--additional .form__wrapper {
   @media (min-width: $tablet-width) {
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: space-between;
   }
 }
@@ -438,26 +434,10 @@
 .form__fieldset--additional .form__title {
   margin-top: 0;
   margin-bottom: 34px;
+  margin-right: 100%;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 57px;
-  }
-
-  &::after {
-    margin-top: 14px;
-    margin-left: 7%;
-
-    @media (min-width: $tablet-width) {
-      margin-top: 22px;
-      margin-left: 3%;
-    }
-  }
-
-  &::before {
-    @media (min-width: $tablet-width) {
-      margin-top: 22px;
-      margin-left: -103%;
-    }
   }
 }
 
@@ -502,6 +482,11 @@
 
 .form__checkbox:hover + .form__check-button {
   border-color: #bababa;
+}
+
+.form__checkbox:focus + .form__check-button {
+  box-shadow: 0 3px 5px rgba($color: #000000, $alpha: 0.2),
+    0 0 0 1px $basic_green;
 }
 
 .form__checkbox:checked + .form__check-button {

@@ -8,6 +8,8 @@
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple.png">
     <link rel="manifest" href="manifest.webmanifest">
+    <link rel="preload" href="fonts/oswaldregular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswaldmedium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="page__body">
@@ -101,7 +103,7 @@
               <p class="features__description">Замените один-два приема обычной еды на наше функциональное питание.</p>
             </li>
             <li class="features__list-item features__list-item--alarm">
-              <p class="features__description">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
+              <p class="features__description">Уже через месяц наслаждайтесь изменениями к лучшему<br> вашего питомца!</p>
             </li>
           </ul>
         </div>
@@ -133,15 +135,15 @@
               </picture>
             </div>
             <div class="example__result-control">
-              <span class="example__result-state example__result-state--before">Было</span>
+              <span class="example__result-state example__result-state--before" tabindex="0">Было</span>
               <label class="example__result-switcher" for="result-slider">
                 <input class="example__result-checkbox visually-hidden" type="checkbox" name="weight-loss-result" id="result-slider" checked>
                 <span class="example__result-toggle-slider"></span>
               </label>
               <label class="example__result-range" for="result-range">
-                <input class="example__result-range-slider" type="range" max="100" min="0" value="50" id="result-range">
+                <input class="example__result-range-slider" type="range" max="100" min="0" value="50" id="result-range" aria-label="slider handle">
               </label>
-              <span class="example__result-state example__result-state--after">Стало</span>
+              <span class="example__result-state example__result-state--after" tabindex="0">Стало</span>
             </div>
           </div>
         </div>
@@ -153,12 +155,11 @@
           <p class="contacts__slogan">приглашаем<br>к сотрудничеству<br>дилеров!</p>
           <p class="contacts__address">ул. Большая<br>Конюшенная, д. 19/8<br><span>Санкт-Петербург</span></p>
         </div>
-        <div class="contacts__map" id="map">
-          <script
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhVBMZINk8f48H9OhwELtc8Pxew7YfoTk&callback=initMap&libraries=&v=weekly"
-            async>
-          </script>
-        </div>
+        <div class="contacts__map" id="map"></div>
+        <script
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhVBMZINk8f48H9OhwELtc8Pxew7YfoTk&callback=initMap&libraries=&v=weekly"
+          async>
+        </script>
       </div>
       <div class="wrapper page-footer__bottom-wrapper">
         <a class="page-footer__logo">

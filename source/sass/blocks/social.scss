@@ -28,12 +28,14 @@
     height: 22px;
   }
 
-  &:hover {
-    fill: $basic_green;
-  }
+  @media (min-width: $desktop-width) {
+    &:hover {
+      fill: $basic_green;
+    }
 
-  &:active {
-    fill: rgba($color: $basic_green, $alpha: 0.3);
+    &:active {
+      fill: rgba($color: $basic_green, $alpha: 0.3);
+    }
   }
 }
 
@@ -45,12 +47,14 @@
     height: 23px;
   }
 
-  &:hover {
-    fill: $basic_green;
-  }
+  @media (min-width: $desktop-width) {
+    &:hover {
+      fill: $basic_green;
+    }
 
-  &:active {
-    fill: rgba($color: $basic_green, $alpha: 0.3);
+    &:active {
+      fill: rgba($color: $basic_green, $alpha: 0.3);
+    }
   }
 }
 
@@ -58,15 +62,17 @@
   stroke: $special_grey-2;
 
   @media (min-width: $tablet-width) {
-    width: 28px;
-    height: 33px;
+    width: 32px;
+    height: 32px;
   }
 
-  &:hover {
-    stroke: $basic_green;
-  }
+  @media (min-width: $desktop-width) {
+    &:hover {
+      stroke: $basic_green;
+    }
 
-  &:active {
-    stroke: rgba($color: $basic_green, $alpha: 0.3);
+    &:active {
+      stroke: rgba($color: $basic_green, $alpha: 0.3);
+    }
   }
 }
