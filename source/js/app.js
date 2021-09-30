@@ -22,7 +22,7 @@ function initMap() {
       zoom: 18,
     });
 
-    const ICON_MARKER = "../img/map-pin.png";
+    const ICON_MARKER = "img/map-pin.png";
 
     const MARKER = new google.maps.Marker({
       position: CAT_ENERGY,
