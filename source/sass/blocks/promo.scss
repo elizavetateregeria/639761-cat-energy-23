@@ -9,12 +9,20 @@
   background-repeat: no-repeat;
   color: $basic_white;
 
+  @media (min-width: 508px) {
+    background-size: cover;
+  }
+
   @media (min-resolution: 2dppx) {
     background: linear-gradient(rgba(104, 183, 56, 0.85) 302px, $basic_white 302px),
       url("../img/index-background@2x.jpg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: top center;
+
+    @media (min-width: 508px) {
+      background-size: cover;
+    }
   }
 
   @media (min-width: $tablet-width) {
@@ -27,15 +35,18 @@
   @media (min-width: $desktop-width) {
     padding: 141px 0 0;
     min-height: 696px;
+
     background: linear-gradient(to left, rgba(104, 183, 56, 0.85) 50%, $basic_white 50%),
-      url("../img/index-background-desktop.jpg");
+      url("../img/index-background-desktop.jpg"),
+      linear-gradient(to left, #4a4a4a 50%, $basic_white 50%);
     background-position: top right;
     background-size: contain;
     background-repeat: no-repeat;
 
     @media (min-resolution: 2dppx) {
       background: linear-gradient(to left, rgba(104, 183, 56, 0.85) 50%, $basic_white 50%),
-        url("../img/index-background-desktop@2x.jpg");
+        url("../img/index-background-desktop@2x.jpg"),
+        linear-gradient(to left, #4a4a4a 50%, $basic_white 50%);
       background-position: top right;
       background-size: contain;
       background-repeat: no-repeat;
@@ -69,7 +80,7 @@
   margin-bottom: 26px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 42px;
+    margin-bottom: 41px;
   }
 
   @media (min-width: $desktop-width) {
